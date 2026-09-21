@@ -1,13 +1,334 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-app</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Michelle Solares - Software Engineer</title>
+<meta name="description" content="Michelle Solares is a software engineer building frontend, full-stack, mobile, and AI-powered applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="cam" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></g></symbol>
+</svg>
+
+<div class="layout">
+
+  <aside class="side">
+    <!-- PHOTO: to add your portrait, replace the whole <div class="portrait">...</div> with:
+         <div class="portrait"><img src="images/me.jpg" alt="Photo of Michelle"></div> -->
+    <div class="portrait" role="img" aria-label="Portrait placeholder">
+      <div class="ph"><svg width="34" height="34"><use href="#cam"/></svg><span>Add your photo</span></div>
+    </div>
+    <div class="id">
+      <h1>Michelle Solares</h1>
+      <p>Software engineer</p>
+      <p>Cal Poly Pomona, class of 2026</p>
+    </div>
+    <nav class="side-nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#life">Collage</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="actions">
+      <a class="btn primary" href="Michelle_Solares_Resume.pdf" download>Download resume (PDF)</a>
+      <div class="row">
+        <a class="btn" href="mailto:solaresmichelle22@gmail.com">Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/michelle-solares" target="_blank" rel="noopener">LinkedIn</a>
+        <button class="icon-btn" id="theme" type="button" aria-label="Switch between light and dark theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17a8.5 8.5 0 0 0 0-17z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="section" id="about" aria-labelledby="about-h">
+      <h2 id="about-h" style="position:absolute;left:-9999px">About</h2>
+      <p class="statement">I build frontend, full-stack, mobile, and AI-powered apps, and I care about software that scales and feels good to use.</p>
+      <div class="bio">
+        <p>I graduated from Cal Poly Pomona in May 2026 with a B.S. in Computer Science and a minor in Mathematics. For my math honors project, our team researched steady-state distributions of Markov chains. Most of my work is on the frontend, turning designs into responsive, accessible interfaces, and I’ve added backend, Android, and AI integration along the way.</p>
+        <p>Hackathons have been a big part of how I build. At BroncoHacks 2026, my team’s Maternal Resource Exchange won Best Use of Gemma 4 out of 150+ participants. Outside of code, I mentor other students through the SheCodes club.</p>
+      </div>
+      <dl class="glance">
+        <div><dt>Graduated</dt><dd>May 2026</dd></div>
+        <div><dt>Degree</dt><dd>B.S. Computer Science, minor in Mathematics</dd></div>
+        <div><dt>Based in</dt><dd>Inglewood, CA</dd></div>
+        <div><dt>Speaks</dt><dd>English and Spanish</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-h">
+      <h2 id="work-h">Work</h2>
+      <p class="sub">Hackathons, class projects, and team builds. Open any project for details.</p>
+      <div class="seg" role="group" aria-label="Filter projects">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="web" aria-pressed="false">Web</button>
+        <button type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+        <button type="button" data-filter="ai" aria-pressed="false">AI</button>
+        <button type="button" data-filter="math" aria-pressed="false">Math</button>
+        <button type="button" data-filter="games" aria-pressed="false">Games and puzzles</button>
+      </div>
+      <p id="count" aria-live="polite">Showing 12 projects</p>
+
+      <div class="list">
+        <details class="project has-award" data-cats="web ai" open>
+          <summary>
+            <h3>Maternal Resource Exchange</h3>
+            <span class="meta">Frontend and AI Engineer, BroncoHacks, April 2026</span>
+            <span class="award">Best Use of Gemma 4, 150+ participants</span>
+          </summary>
+          <div class="body">
+            <p>A platform for exchanging baby clothing and maternal resources, built to tackle the 130M+ baby clothing items discarded every year. I built the React interface and stage-based logic for personalized recommendations, then used Google Gemini (Gemma 4) for a listing assistant that classifies items, plus safety checks that flag unsafe or recalled products.</p>
+            <ul class="tags"><li>React</li><li>Google Gemini (Gemma 4)</li><li>Recall API validation</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="math">
+          <summary>
+            <h3>Steady State Distributions of Generalized Birth-Death Chains</h3>
+            <span class="meta">Mathematics honors project, team of five, Cal Poly Pomona</span>
+          </summary>
+          <div class="body">
+            <p>Our team studied the space of all 3-state birth-death Markov chains with nonzero transition probabilities. We worked out how a chain’s parameters determine its steady-state distribution, grouped chains that share the same steady state, and studied the topology of the resulting space. Along the way we split the problem into cases using eigenvalues and used a dual matrix to connect steady states to the gambler’s ruin problem.</p>
+            <p>Our main conjecture is that the space of these equivalence classes is homeomorphic to the 2-dimensional probability simplex without its boundary.</p>
+            <ul class="tags"><li>Markov chains</li><li>Probability</li><li>Linear algebra</li><li>Topology</li><li>Research poster</li></ul>
+            <button class="poster-btn" type="button" data-poster aria-label="View the research poster larger">
+              <img src="images/math-honors-poster.png" alt="Research poster titled Steady State Distributions of Generalized Birth-Death Chains, with sections on the motivation, equivalent chains, stationary distributions, parameterization, eigenvalue cases, the dual matrix, and the gambler's ruin.">
+              <span>View poster larger</span>
+            </button>
+          </div>
+        </details>
+
+        <details class="project" data-cats="web">
+          <summary>
+            <h3>Skill Swap</h3>
+            <span class="meta">Frontend Developer, AthenaHacks, March 2026</span>
+          </summary>
+          <div class="body">
+            <p>A cost-free barter app where people trade skills instead of money, designed to scale to 1,000+ users. I built the request, browsing, and messaging interfaces and the sign-in based navigation.</p>
+            <ul class="tags"><li>React</li><li>Git</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="web">
+          <summary>
+            <h3>BroncoHacks website</h3>
+            <span class="meta">Frontend Developer, February to March 2026</span>
+          </summary>
+          <div class="body">
+            <p>The event site for Cal Poly Pomona’s BroncoHacks, built from Figma designs with reusable components and registration workflows.</p>
+            <ul class="tags"><li>React</li><li>Figma</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="web">
+          <summary>
+            <h3>ParkIt</h3>
+            <span class="meta">Software Engineer, September to December 2025</span>
+          </summary>
+          <div class="body">
+            <p>A parking platform built with an Agile Scrum team. I built responsive React components and the Node.js and Express services that handle data in MongoDB.</p>
+            <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="mobile">
+          <summary>
+            <h3>PetMinder</h3>
+            <span class="meta">Full-Stack Developer, November to December 2025</span>
+          </summary>
+          <div class="body">
+            <p>An Android app for pet care, with interactive pet profiles and a calendar for daily tasks like feeding and walks. I worked on both the frontend and backend.</p>
+            <ul class="tags"><li>Android</li><li>Android Studio</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="mobile">
+          <summary>
+            <h3>Future Script</h3>
+            <span class="meta">Project Lead, September to December 2025</span>
+          </summary>
+          <div class="body">
+            <p>An Android app for sending messages to your future self, with encrypted message storage and scheduled notifications.</p>
+            <ul class="tags"><li>Android</li><li>Encryption</li><li>Notifications</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="web">
+          <summary>
+            <h3>Global Travel Planner</h3>
+            <span class="meta">CodePath, February to May 2025</span>
+          </summary>
+          <div class="body">
+            <p>A trip planning and signup site that tracks trip costs and shows total expenses and a spending breakdown for each journey.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="web">
+          <summary>
+            <h3>Art Gallery</h3>
+            <span class="meta">Web Development course, September to November 2024</span>
+          </summary>
+          <div class="body">
+            <p>An online gallery with JavaScript filtering, sorting, and image detail views, turned from Figma wireframes into responsive, accessible layouts.</p>
+            <ul class="tags"><li>JavaScript</li><li>Figma</li><li>Accessibility</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="ai">
+          <summary>
+            <h3>Car Age Prediction from Images</h3>
+            <span class="meta">Team Lead, October to December 2024</span>
+          </summary>
+          <div class="body">
+            <p>I led a four-person team building a CNN that predicts a car’s type and year from a photo. Better preprocessing (resizing and normalization) improved model accuracy by 15%.</p>
+            <ul class="tags"><li>CNN</li><li>Machine learning</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="games">
+          <summary>
+            <h3>Rock Paper Escape</h3>
+            <span class="meta">Unity and Blender, March to May 2024</span>
+          </summary>
+          <div class="body">
+            <p>A puzzle game where players match device types (rock, paper, or scissors) to enemy weaknesses. I modeled a low-poly 3D knight, added sound effects, and wrote code.</p>
+            <ul class="tags"><li>Unity</li><li>Blender</li></ul>
+          </div>
+        </details>
+
+        <details class="project" data-cats="games">
+          <summary>
+            <h3>Sudoku solver in MIPS</h3>
+            <span class="meta">Computer Organization course, November to December 2023</span>
+          </summary>
+          <div class="body">
+            <p>A Sudoku solver written in MIPS assembly that checks rows, columns, and sub-grids, then displays the solved puzzle.</p>
+            <ul class="tags"><li>MIPS assembly</li></ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h">Experience</h2>
+      <p class="sub">Work, leadership, and community, most recent first.</p>
+      <ol class="timeline">
+        <li>
+          <time datetime="2026-05">May 2026 to present</time>
+          <h3>Software Engineer</h3>
+          <p class="org">Confidential startup</p>
+          <ul>
+            <li>Build and maintain frontend features with Vue.js, TypeScript, Vite, Pinia, and Vue Router.</li>
+            <li>Implement authentication, protected routes, and signed-in and signed-out flows.</li>
+            <li>Work on OAuth integrations, including troubleshooting Apple Sign-In.</li>
+            <li>Test and debug with Playwright and TypeScript, and collaborate through pull requests and code reviews.</li>
+          </ul>
+        </li>
+        <li>
+          <time datetime="2026-04">April to July 2026</time>
+          <h3>Volunteer, FIFA World Cup</h3>
+          <p class="org">Workforce Management, uniform distribution team</p>
+          <ul><li>Prepared and distributed uniform orders to staff and volunteers during high-volume event operations.</li></ul>
+        </li>
+        <li>
+          <time datetime="2025-09">September 2025 to present</time>
+          <h3>Project Manager</h3>
+          <p class="org">SheCodes Club</p>
+          <ul><li>Coordinate team meetings, assign sprint tasks, and keep technical and design teams aligned.</li></ul>
+        </li>
+        <li>
+          <time datetime="2024-09">September 2024</time>
+          <h3>Judge</h3>
+          <p class="org">Ignite CS Programming Expo</p>
+          <ul><li>Reviewed and scored K-12 programming projects and gave feedback to young coders.</li></ul>
+        </li>
+        <li>
+          <time datetime="2024-02">February 2024 to present</time>
+          <h3>Mentor</h3>
+          <p class="org">SheCodes Club</p>
+          <ul><li>Guide mentees through goal setting, technical challenges, and professional growth.</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-h">
+      <h2 id="skills-h">Skills</h2>
+      <p class="sub">What I reach for most.</p>
+      <dl class="skills">
+        <div class="row"><dt>Languages</dt><dd>Java, Python, JavaScript, TypeScript, C++, C#</dd></div>
+        <div class="row"><dt>Frontend</dt><dd>React, Vue.js, HTML, CSS, Vite, Vue Router, Pinia</dd></div>
+        <div class="row"><dt>Backend</dt><dd>Node.js, Express, MongoDB, REST APIs</dd></div>
+        <div class="row"><dt>AI and tools</dt><dd>Google Gemini (Gemma 4), prompt engineering, Git and GitHub, Android Studio, Playwright</dd></div>
+        <div class="row"><dt>Practices</dt><dd>Agile and Scrum, CI/CD, code reviews, debugging and testing, responsive design</dd></div>
+        <div class="row"><dt>Math</dt><dd>Markov chains, probability, linear algebra</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="life" aria-labelledby="life-h">
+      <h2 id="life-h">Collage</h2>
+      <p class="sub">A peek into my life, between hackathons and community.</p>
+      <div class="bento">
+        <!-- PHOTO: in any tile, replace <div class="ph">...</div> with <img src="images/your-photo.jpg" alt="Describe the photo"> -->
+        <figure class="tile t-a">
+          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>BroncoHacks 2026</h3><p>Where Maternal Resource Exchange won Best Use of Gemma 4.</p></figcaption>
+        </figure>
+        <figure class="tile blush t-b">
+          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>SheCodes Club</h3><p>Mentor and project manager.</p></figcaption>
+        </figure>
+        <figure class="tile t-c">
+          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>FIFA World Cup</h3><p>Volunteering on the uniform distribution team.</p></figcaption>
+        </figure>
+        <div class="tile text t-d">
+          <h3>English and Spanish</h3>
+          <p>I speak both fluently.</p>
+        </div>
+        <figure class="tile blush t-e">
+          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>AthenaHacks 2026</h3><p>Where Skill Swap came together.</p></figcaption>
+        </figure>
+        <figure class="tile t-f">
+          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>Ignite CS Expo</h3><p>Judging K-12 projects.</p></figcaption>
+        </figure>
+        <figure class="tile blush t-g">
+          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
+          <figcaption><h3>Something you love</h3><p>A hobby, place, or person.</p></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-h">
+      <h2 id="contact-h">Contact</h2>
+      <p class="sub">Say hello by email or on LinkedIn.</p>
+      <a class="mail" href="mailto:solaresmichelle22@gmail.com">solaresmichelle22@gmail.com</a>
+      <div class="contact-links">
+        <a class="btn" href="https://www.linkedin.com/in/michelle-solares" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+    <footer>© 2026 Michelle Solares</footer>
+  </main>
+</div>
+
+
+<dialog id="poster-dialog" class="lightbox" aria-label="Research poster">
+  <div class="lightbox-top"><button class="btn" type="button" data-close>Close</button></div>
+  <img id="poster-large" alt="Research poster titled Steady State Distributions of Generalized Birth-Death Chains, with sections on the motivation, equivalent chains, stationary distributions, parameterization, eigenvalue cases, the dual matrix, and the gambler's ruin.">
+</dialog>
+
+<script src="script.js" defer></script>
+</body>
 </html>
