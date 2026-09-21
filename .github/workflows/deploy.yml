@@ -1,3 +1,4 @@
+yaml
 name: Deploy Portfolio to GitHub Pages
 
 on:
@@ -25,7 +26,7 @@ jobs:
           cache: npm
           cache-dependency-path: portfolio-app/package-lock.json
 
-        - name: Check npm environment
+      - name: Check npm environment
         working-directory: portfolio-app
         run: |
           node --version
