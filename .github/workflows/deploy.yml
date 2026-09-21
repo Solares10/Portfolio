@@ -25,6 +25,14 @@ jobs:
           cache: npm
           cache-dependency-path: portfolio-app/package-lock.json
 
+        - name: Check npm environment
+        working-directory: portfolio-app
+        run: |
+          node --version
+          npm --version
+          git status
+          npm install --package-lock-only --dry-run
+
       - name: Install dependencies
         working-directory: portfolio-app
         run: npm ci
