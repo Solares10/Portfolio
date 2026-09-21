@@ -19,11 +19,7 @@
 <div class="layout">
 
   <aside class="side">
-    <!-- PHOTO: to add your portrait, replace the whole <div class="portrait">...</div> with:
-         <div class="portrait"><img src="images/me.jpg" alt="Photo of Michelle"></div> -->
-    <div class="portrait" role="img" aria-label="Portrait placeholder">
-      <div class="ph"><svg width="34" height="34"><use href="#cam"/></svg><span>Add your photo</span></div>
-    </div>
+    <div class="portrait"><img src="images/me.png" alt="Photo of Michelle"></div>
     <div class="id">
       <h1>Michelle Solares</h1>
       <p>Software engineer</p>
@@ -54,7 +50,7 @@
       <h2 id="about-h" style="position:absolute;left:-9999px">About</h2>
       <p class="statement">I build frontend, full-stack, mobile, and AI-powered apps, and I care about software that scales and feels good to use.</p>
       <div class="bio">
-        <p>I graduated from Cal Poly Pomona in May 2026 with a B.S. in Computer Science and a minor in Mathematics. For my math honors project, our team researched steady-state distributions of Markov chains. Most of my work is on the frontend, turning designs into responsive, accessible interfaces, and I’ve added backend, Android, and AI integration along the way.</p>
+        <p>I graduated from Cal Poly Pomona in May 2026 with a B.S. in Computer Science and a minor in Mathematics. For my math project, our team researched steady-state distributions of Markov chains. Most of my work is on the frontend, turning designs into responsive, accessible interfaces, and I’ve added backend, Android, and AI integration along the way.</p>
         <p>Hackathons have been a big part of how I build. At BroncoHacks 2026, my team’s Maternal Resource Exchange won Best Use of Gemma 4 out of 150+ participants. Outside of code, I mentor other students through the SheCodes club.</p>
       </div>
       <dl class="glance">
@@ -94,7 +90,7 @@
         <details class="project" data-cats="math">
           <summary>
             <h3>Steady State Distributions of Generalized Birth-Death Chains</h3>
-            <span class="meta">Mathematics honors project, team of five, Cal Poly Pomona</span>
+            <span class="meta">Mathematics project, team of five, Cal Poly Pomona</span>
           </summary>
           <div class="body">
             <p>Our team studied the space of all 3-state birth-death Markov chains with nonzero transition probabilities. We worked out how a chain’s parameters determine its steady-state distribution, grouped chains that share the same steady state, and studied the topology of the resulting space. Along the way we split the problem into cases using eigenvalues and used a dual matrix to connect steady states to the gambler’s ruin problem.</p>
@@ -104,6 +100,7 @@
               <img src="images/math-honors-poster.png" alt="Research poster titled Steady State Distributions of Generalized Birth-Death Chains, with sections on the motivation, equivalent chains, stationary distributions, parameterization, eigenvalue cases, the dual matrix, and the gambler's ruin.">
               <span>View poster larger</span>
             </button>
+            <div><a class="btn" href="images/document.pdf" target="_blank" rel="noopener">Open poster as PDF</a></div>
           </div>
         </details>
 
@@ -278,35 +275,84 @@
       <h2 id="life-h">Collage</h2>
       <p class="sub">A peek into my life, between hackathons and community.</p>
       <div class="bento">
-        <!-- PHOTO: in any tile, replace <div class="ph">...</div> with <img src="images/your-photo.jpg" alt="Describe the photo"> -->
-        <figure class="tile t-a">
-          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>BroncoHacks 2026</h3><p>Where Maternal Resource Exchange won Best Use of Gemma 4.</p></figcaption>
-        </figure>
-        <figure class="tile blush t-b">
-          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>SheCodes Club</h3><p>Mentor and project manager.</p></figcaption>
-        </figure>
-        <figure class="tile t-c">
-          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>FIFA World Cup</h3><p>Volunteering on the uniform distribution team.</p></figcaption>
-        </figure>
-        <div class="tile text t-d">
-          <h3>English and Spanish</h3>
-          <p>I speak both fluently.</p>
+      <figure class="tile t-a" data-carousel>
+        <div class="viewport" role="group" aria-roledescription="carousel" aria-label="BroncoHacks 2026 photos">
+          <div class="track">
+            <div class="slide"><img src="images/bronco.png" alt="Michelle at BroncoHacks 2026"></div>
+            <div class="slide"><img src="images/bronco4.png" alt="BroncoHacks 2026, photo 2"></div>
+            <div class="slide"><img src="images/bronco1.png" alt="BroncoHacks 2026, photo 3"></div>
+            <div class="slide"><img src="images/bronco2.png" alt="BroncoHacks 2026, photo 4"></div>
+            <div class="slide"><img src="images/bronco3.png" alt="BroncoHacks 2026, photo 5"></div>
+          </div>
         </div>
-        <figure class="tile blush t-e">
-          <div class="ph"><svg width="32" height="32"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>AthenaHacks 2026</h3><p>Where Skill Swap came together.</p></figcaption>
-        </figure>
-        <figure class="tile t-f">
-          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>Ignite CS Expo</h3><p>Judging K-12 projects.</p></figcaption>
-        </figure>
-        <figure class="tile blush t-g">
-          <div class="ph"><svg width="28" height="28"><use href="#cam"/></svg><span>Add photo</span></div>
-          <figcaption><h3>Something you love</h3><p>A hobby, place, or person.</p></figcaption>
-        </figure>
+        <figcaption><h3>BroncoHacks 2026</h3></figcaption>
+      </figure>
+
+      <figure class="tile blush t-b" data-carousel>
+        <div class="viewport" role="group" aria-roledescription="carousel" aria-label="SheCodes Club photos">
+          <div class="track">
+            <div class="slide"><img src="images/shecodes.png" alt="Michelle with the SheCodes club"></div>
+            <div class="slide"><img src="images/shecodes1.png" alt="SheCodes Club, photo 2"></div>
+            <div class="slide"><img src="images/shecodes2.png" alt="SheCodes Club, photo 3"></div>
+            <div class="slide"><img src="images/shecodes4.png" alt="SheCodes Club, photo 4"></div>
+            <div class="slide"><img src="images/shecodes5.png" alt="SheCodes Club, photo 5"></div>
+            <div class="slide"><img src="images/shecodes6.png" alt="SheCodes Club, photo 6"></div>
+            <div class="slide"><img src="images/shecodes8.png" alt="SheCodes Club, photo 7"></div>
+            <div class="slide"><img src="images/shecodes9.png" alt="SheCodes Club, photo 8"></div>
+            <div class="slide"><img src="images/shecodes10.png" alt="SheCodes Club, photo 9"></div>
+            <div class="slide"><img src="images/shecodes11.png" alt="SheCodes Club, photo 10"></div>
+          </div>
+        </div>
+        <figcaption><h3>SheCodes Club</h3></figcaption>
+      </figure>
+
+      <figure class="tile t-c" data-carousel>
+        <div class="viewport" role="group" aria-roledescription="carousel" aria-label="FIFA World Cup photos">
+          <div class="track">
+            <div class="slide"><img src="images/fifa.png" alt="Michelle volunteering at the FIFA World Cup"></div>
+            <div class="slide"><img src="images/fifa1.png" alt="FIFA World Cup, photo 2"></div>
+            <div class="slide"><img src="images/fifa3.png" alt="FIFA World Cup, photo 3"></div>
+            <div class="slide"><img src="images/fifa4.png" alt="FIFA World Cup, photo 4"></div>
+            <div class="slide"><img src="images/fifa5.png" alt="FIFA World Cup, photo 5"></div>
+            <div class="slide"><img src="images/fifa6.png" alt="FIFA World Cup, photo 6"></div>
+            <div class="slide"><img src="images/fifa7.png" alt="FIFA World Cup, photo 7"></div>
+          </div>
+        </div>
+        <figcaption><h3>FIFA World Cup</h3></figcaption>
+      </figure>
+
+      <figure class="tile blush t-e" data-carousel>
+        <div class="viewport" role="group" aria-roledescription="carousel" aria-label="AthenaHacks 2026 photos">
+          <div class="track">
+            <div class="slide"><img src="images/athenahacks.png" alt="Michelle with her team at AthenaHacks 2026"></div>
+            <div class="slide"><img src="images/athenahacks1.png" alt="AthenaHacks 2026, photo 2"></div>
+            <div class="slide"><img src="images/athenahacks2.png" alt="AthenaHacks 2026, photo 3"></div>
+            <div class="slide"><img src="images/athenahacks3.png" alt="AthenaHacks 2026, photo 4"></div>
+            <div class="slide"><img src="images/athenahacks4.png" alt="AthenaHacks 2026, photo 5"></div>
+            <div class="slide"><img src="images/athenahacks5.png" alt="AthenaHacks 2026, photo 6"></div>
+          </div>
+        </div>
+        <figcaption><h3>AthenaHacks 2026</h3></figcaption>
+      </figure>
+
+      <figure class="tile blush t-g" data-carousel>
+        <div class="viewport" role="group" aria-roledescription="carousel" aria-label="My Adventures photos">
+          <div class="track">
+            <div class="slide"><img src="images/favorite.png" alt="One of Michelle's adventures"></div>
+            <div class="slide"><img src="images/favorite1.png" alt="My Adventures, photo 2"></div>
+            <div class="slide"><img src="images/favorite2.png" alt="My Adventures, photo 3"></div>
+            <div class="slide"><img src="images/favorite3.png" alt="My Adventures, photo 4"></div>
+            <div class="slide"><img src="images/favorite4.png" alt="My Adventures, photo 5"></div>
+            <div class="slide"><img src="images/favorite5.png" alt="My Adventures, photo 6"></div>
+            <div class="slide"><img src="images/favorite6.png" alt="My Adventures, photo 7"></div>
+            <div class="slide"><img src="images/favorite7.png" alt="My Adventures, photo 8"></div>
+            <div class="slide"><img src="images/favorite8.png" alt="My Adventures, photo 9"></div>
+            <div class="slide"><img src="images/favorite9.png" alt="My Adventures, photo 10"></div>
+            <div class="slide"><img src="images/favorite10.png" alt="My Adventures, photo 11"></div>
+          </div>
+        </div>
+        <figcaption><h3>My Adventures</h3></figcaption>
+      </figure>
       </div>
     </section>
 
