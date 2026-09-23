@@ -97,6 +97,20 @@ ul,ol{margin:0;padding:0;list-style:none}
 .lightbox-top{position:sticky;top:0;display:flex;justify-content:flex-end;padding:10px;background:var(--surface)}
 .lightbox img{display:block;width:100%;height:auto}
 
+/* project detail dialog */
+.detail-body{padding:22px 26px 28px;display:grid;gap:14px}
+.detail-body #detail-title{font-size:1.5rem}
+.detail-body .meta{color:var(--muted);font-size:.9rem}
+.detail-body #detail-text{display:grid;gap:12px;color:var(--muted)}
+.detail-links{display:flex;flex-wrap:wrap;gap:10px}
+.detail-shots{position:relative;width:100%;height:clamp(220px,42vh,420px);border-radius:14px;overflow:hidden;background:var(--lilac)}
+.detail-shots .viewport{position:absolute;inset:0;overflow:hidden}
+.detail-shots .track{display:flex;height:100%;transition:transform .45s cubic-bezier(.3,.7,.2,1)}
+.detail-shots .track > div{position:relative;flex:0 0 100%;height:100%}
+.detail-shots img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--surface)}
+.detail-shots .ph{position:absolute;inset:0}
+.detail-shots .single .nav,.detail-shots .single .dots{display:none}
+
 /* timeline */
 .timeline{padding-left:28px;border-left:2px solid var(--line)}
 .timeline li{position:relative;padding-bottom:34px}
